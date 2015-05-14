@@ -13,13 +13,20 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr/>';
+var HTMLheaderRole = '<span class="white-text">%data%</span><hr/>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span>\n\
+    <span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><a class="contact-ttp orange-text" href="callto://%data%">\n\
+    Mobile<span class="white-text">%data%</span></a></li>';
+var HTMLemail = '<li class="flex-item"><a class="contact-ttp orange-text" href="mailto:%data%">\n\
+    email<span class="white-text">%data%</span></a></li>';
+var HTMLtwitter = '<li class="flex-item"><a class="contact-ttp orange-text" target="_blank" \n\
+    href="https://twitter.com/%data%">twitter<span class="white-text">@%data%</span></a></li>';
+var HTMLgithub = '<li class="flex-item"><a class="contact-ttp orange-text" target="_blank" \n\
+    href="https://github.com/%data%">github<span class="white-text">%data%</span></a></li>';
+var HTMLlinkedin = '<li class="flex-item"><a class="contact-ttp orange-text" target="_blank" \n\
+    href="https://www.linkedin.com/pub/mark-carpenter-jr/37/12b/b45">linkedin<span class="white-text">%data%</span></a></li>';
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
@@ -35,12 +42,15 @@ var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkdutiesStart = '<h5 id="dutiesH5">Duties Included:</h5><ul id="duties" class="flex-box"></ul>';
+var HTMLworkDuties = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectUrl = '<a href="%data%" target="_blank">See The Project Here</a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -85,7 +95,10 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+    var x = loc.pageX;
+    var y = loc.pageY;
+    
+    logClicks(x,y);
 });
 
 
@@ -170,7 +183,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+    infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -233,11 +246,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   // Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+  map.fitBounds(mapBounds);
+});

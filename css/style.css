@@ -1,11 +1,30 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: Droid sans, sans-serif;
+}
+
+body {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    background-attachment: fixed;
+}
+
+#main{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .clearfix {
-  overflow: auto;
+  overflow: hidden;
 }
 
 .education-entry, .work-entry, .project-entry {
@@ -48,7 +67,6 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
-
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -63,31 +81,51 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
+  color: #ababab;
   font-size: 14px;
-  color: #333333;
   line-height: 21px;
 }
 
 a {
   color: #1199C3;
   text-decoration: none;
-  margin-top: 10px;
   display: block;
+  margin-top: 10px;
+}
+
+#name {
+    color: #ffffff;
+    font-family: Bangers, sans-serif;
+    font-size: 64px;
+    font-weight: 100;
+    letter-spacing: 150%;
+    text-shadow:
+        1px -1px .1px #000000,
+        6px -6px .25px #65c6bf,
+        11px -11px .25px #00c095,
+        16px -16px .25px #7ed804;
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #F3F3F3;
-  line-height: 28px;
+    color: #ffffff;
+    font-family: Orbitron, sans-serif;
+    font-weight: 800;
+    text-shadow: 0px 6px 8px #634271, 1px 1px 1px black, 1px 4px 6px #634271;
+    font-size: 22px;
+    line-height: 28px;
 }
 
 #skillsH3 {
   color: #F5AE23;
+  font-family: Bangers, sans-serif;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 4px 6px #000000, 0 0 0 #000, 1px 4px 6px #000000;
+  font-style: normal;
+  font-size: 22px;
+  font-weight: 400;
   display: none;
 }
 
@@ -96,16 +134,36 @@ a {
 }
 
 .orange-text {
-  color: #F5AE23;
+    font-size: 24px;
+    font-family: Bangers, sans-serif;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 4px 6px #000000, 0 0 0 #000, 1px 4px 6px #000000;
+    color: #F5AE23;
+}
+
+.heading-text {
+    font-size: 26px;
+    font-family: Bangers, sans-serif;
+    letter-spacing: 3px;
+    text-shadow: 1px 4px 6px #000000, 0 0 0 #000, 1px 4px 6px #000000;
+    color: #ffffff;
 }
 
 .white-text {
-  font-weight: bold;
-  color: #FFFFFF;
+    color: #ffffff;
+    font-family: Orbitron, sans-serif;
+    font-weight: 400;
+    text-shadow: 1px 4px 6px #634271, 0 0 0 #000, 1px 4px 6px #634271;
 }
 
 .gray {
   background-color: #F3F3F3;
+  padding-bottom: 10px;
+  clear:both;
+}
+
+.black {
+  background-color: black;
   padding-bottom: 10px;
   clear:both;
 }
@@ -116,7 +174,15 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+
+}
+
+#workExperience{
+    clear: both;
+    padding-bottom: 10px;
+    border-bottom: 2px;
+    border-bottom-style: outset;
+    border-color: #ababab;
 }
 
 .flex-box {
@@ -139,15 +205,27 @@ ul {
   list-style-type: none;
 }
 
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
+img {
+  margin: 10px;
+}
+#projects img{
+    display: inline-block;
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 4px 6px #634271, 0 0 0 #000, 1px 4px 6px #634271;
 }
 
-img {
-  padding: 10px;
+.biopic {
+  float: left;
+  width: 175px;
+  display: none;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 1px 4px 6px #634271, 0 0 0 #000, 1px 4px 6px #634271;
 }
 
 /* Bar chart stuff */
@@ -168,6 +246,60 @@ span {
 
 #letsConnect {
   text-align: center;
+}
+
+/*
+    Uses CSS to build tool tips for contact information
+    span class defines type of tool tip
+*/
+
+a.contact-ttp {
+  position: relative;
+  display: inline;
+}
+a.contact-ttp span {
+  position: absolute;
+  display: inline;
+  color: #FFFFFF;
+  background: #000000;
+  border: 2px outset #ababab;
+  line-height: 30px;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+  visibility: hidden;
+  white-space: nowrap;
+  border-radius: 7px;
+}
+a.contact-ttp span:before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -12px;
+  width: 0; height: 0;
+  border-bottom: 12px solid #ababab;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+a.contact-ttp span:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-bottom: 8px solid #000000;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+a:hover.contact-ttp span {
+  visibility: visible;
+  opacity: 0.85;
+  top: 30px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 10;
 }
 
 @media only screen and (max-width: 1024px) {
