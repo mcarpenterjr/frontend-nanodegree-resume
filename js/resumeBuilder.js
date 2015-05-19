@@ -6,7 +6,7 @@ var bio = {
         "email": "marksthings24@gmail.com",
         "github": "xXSirenSxOpusXx",
         "linkedin": "Mark N Carpenter Jr",
-        "twitter": "xXSirenSxOpusXx", //*Drop the @ to build the link
+        "twitter": "xXSirenSxOpusXx", //*Drop the @ to build the link Automagically adds on display
         "location": "Newtown, CT"
     },  
     "bioPic" : "images/mncheadshot.jpg",
@@ -56,7 +56,7 @@ $("#footerContacts").append(formattedEmail);
 $("#footerContacts").append(formattedTwitter);
 $("#footerContacts").append(formattedGithub);
 $("#footerContacts").append(formattedLinkedin);
-
+$("#footerContacts li a").removeClass("contact-ttp");
 //*<-- Work Information Start -->*//
 
 var work = {
@@ -231,7 +231,7 @@ var projects = {
             also my Semantic, Clean and Responsive, HTML and CSS coding ability. \n\
             Something I am particularly proud of seeing it was my first Responsve\n\
             Design acheived with out the help of a responsive frame work.",
-            "images" : [],
+            "images" : ["images/portfolio.PNG"],
             "url" : "http://portfolio.mncarpenter.ninja"
         },
         {
@@ -242,7 +242,7 @@ var projects = {
             information use phpmailer to send it to your specified email and \n\
             then dispaly or ideally through an auto responder email your direct \n\
             contact information along with a vcard file.",
-            "images" : [],
+            "images" : ["images/mobicontact.PNG"],
             "url" : "http://www.mncarpenter.mobi"
         },
         {
@@ -267,7 +267,7 @@ var projects = {
         install period. CakeWalk at the time was the largest private ship in the previous\n\
         75 years ever constructed in North America, the project was one I will never\n\
         forget.",
-            "images" : ["images/cakewalk2.jpg", "images/cakewalk1.jpg"],
+            "images" : ["images/cakewalk2.jpg"],
             "url" : "http://www.derecktor.com/new-construction/yachts/cakewalk/"
         }
     ]
@@ -304,15 +304,4 @@ function displayProjects() {
 displayProjects();
 
 //* <-- Loads Google Map Plots My Locations --> *//
-function locationizer(work_obj) {
-    var locationArray = [];
-    
-    for (job in work_obj.jobs) {
-        var newLocation = work_obj.jobs[job].location;
-        locationArray.push(newLocation);
-    }
-    
-    return locationArray;
-}
-
 $("#mapDiv").append(googleMap);

@@ -1,17 +1,18 @@
+    //* Starts the Stylesheet *//
 * {
   padding:0;
   margin:0;
-  font-family: Droid sans, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 body {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    //background:
+    //linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    //linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    //linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    //linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    //linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    //linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
     background-attachment: fixed;
@@ -97,22 +98,22 @@ a {
 }
 
 #name {
-    color: #ffffff;
-    font-family: Bangers, sans-serif;
-    font-size: 64px;
-    font-weight: 100;
+    color: #00bf93;
+    font-family: Overlock, sans-serif;
+    font-weight: 400;
+    font-size: 52px;
     letter-spacing: 150%;
     text-shadow:
-        1px -1px .1px #000000,
-        6px -6px .25px #65c6bf,
-        11px -11px .25px #00c095,
-        16px -16px .25px #7ed804;
+        0px 0px 3px #ffffff,
+        1px 2px 1px #b1e425,
+        2px 3px 1px #65c6bf,
+        3px 4px 1px #7bcd09;
 }
 
 .welcome-message {
     color: #ffffff;
-    font-family: Orbitron, sans-serif;
-    font-weight: 800;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
     text-shadow: 0px 6px 8px #634271, 1px 1px 1px black, 1px 4px 6px #634271;
     font-size: 22px;
     line-height: 28px;
@@ -216,7 +217,13 @@ img {
     margin-right: auto;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 1px 4px 6px #634271, 0 0 0 #000, 1px 4px 6px #634271;
+    box-shadow:
+        5px 0px 5px #7bcd09,
+        -5px 0px 5px #a6df14,
+        0px -5px 5px #65c6bf,
+        0px 5px 5px #00c095;
+
+
 }
 
 .biopic {
@@ -225,7 +232,11 @@ img {
   display: none;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 1px 4px 6px #634271, 0 0 0 #000, 1px 4px 6px #634271;
+  box-shadow:
+        5px 0px 5px #7bcd09,
+        -5px 0px 5px #a6df14,
+        0px -5px 5px #65c6bf,
+        0px 5px 5px #00c095;
 }
 
 /* Bar chart stuff */
@@ -248,10 +259,10 @@ span {
   text-align: center;
 }
 
-/*
-    Uses CSS to build tool tips for contact information
-    span class defines type of tool tip
-*/
+    /*
+        Uses CSS to build tool tips for contact information
+        <span class=""></span> defines type of tool tip
+    */
 
 a.contact-ttp {
   position: relative;
@@ -300,6 +311,12 @@ a:hover.contact-ttp span {
   left: 50%;
   margin-left: -76px;
   z-index: 10;
+}
+
+    /* Hides Tool Tips In Footer */
+
+#letsConnect li a span{
+    display: none;
 }
 
 @media only screen and (max-width: 1024px) {
