@@ -20,29 +20,29 @@ var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%conta
 var HTMLmobile = '<li class="flex-item"><a class="contact-ttp orange-text" href="callto://%data%">\n\
     Mobile<span class="white-text">%data%</span></a></li>';
 var HTMLemail = '<li class="flex-item"><a class="contact-ttp orange-text" href="mailto:%data%">\n\
-    email<span class="white-text">%data%</span></a></li>';
+    Email<span class="white-text">%data%</span></a></li>';
 var HTMLtwitter = '<li class="flex-item"><a class="contact-ttp orange-text" target="_blank" \n\
-    href="https://twitter.com/%data%">twitter<span class="white-text">@%data%</span></a></li>';
+    href="https://twitter.com/%data%">Twitter<span class="white-text">@%data%</span></a></li>';
 var HTMLgithub = '<li class="flex-item"><a class="contact-ttp orange-text" target="_blank" \n\
-    href="https://github.com/%data%">github<span class="white-text">%data%</span></a></li>';
+    href="https://github.com/%data%">Github<span class="white-text">%data%</span></a></li>';
 var HTMLlinkedin = '<li class="flex-item"><a class="contact-ttp orange-text" target="_blank" \n\
-    href="https://www.linkedin.com/pub/mark-carpenter-jr/37/12b/b45">linkedin<span class="white-text">%data%</span></a></li>';
+    href="https://www.linkedin.com/pub/mark-carpenter-jr/37/12b/b45">Linkedin<span class="white-text">%data%</span></a></li>';
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">Location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
+var HTMLskillsStart = '<h3 id="skills">Skills at a Glance:</h3><ul id="skillsItem" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
+var HTMLworkEmployer = '<a href="#" class="white-text">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
-var HTMLworkdutiesStart = '<h5 id="dutiesH5">Duties Included:</h5><ul id="duties" class="flex-box"></ul>';
+var HTMLworkdutiesStart = '<h3 id="duties">Responsibilities -</h3><ul id="dutiesItem" class="flex-box"></ul>';
 var HTMLworkDuties = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';

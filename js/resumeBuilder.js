@@ -29,7 +29,7 @@ if(bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
     for(skill in bio.skills){
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-    $("#skills").append(formattedSkill);    
+    $("#skillsItem").append(formattedSkill);    
     }
 };
 
@@ -79,7 +79,7 @@ var work = {
             "title": "Manager",
             "dates": "2002 - 2014",
             "location": "Bridgeport, CT",
-            "description": 'This is hard',
+            "description": 'AHHHHH WHAT DO I WRITE!!!',
             "duties": []
         },
         {
@@ -143,7 +143,7 @@ function displayWork(){
             $(".work-entry:last").append(HTMLworkdutiesStart);
             for(duty in work.jobs[job].duties){
             var formattedDuties = HTMLworkDuties.replace("%data%", work.jobs[job].duties[duty]);
-            $("#duties").append(formattedDuties);
+            $("#dutiesItem").append(formattedDuties);
             }
         };
 
