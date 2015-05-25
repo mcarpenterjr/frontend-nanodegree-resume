@@ -11,8 +11,10 @@ var bio = {
     },  
     "bioPic" : "images/mncheadshot.jpg",
     "welcomeMessage" : "What I lack in Formal Education I make up for with Experience.",
-    "skills" : ["HTML", "CSS", "JavaScript", "Front-End Developement", "CMS",
-        "Joomla", "WordPress", "MVC", "CodeIgniter"]
+    "skills" : ["HTML", "CSS", "JavaScript", "Jquery", "Bootstrap", "CMS", "Netbeans",
+        "Git", "GitHub", "MySql", "iOS", "Windows", "CLI", "PhotoShop", "Fireworks",
+        "Premier Pro", "Illistrator", "DreamWeaver", "Joomla", "WordPress", "MVC",
+        "CodeIgniter"]
 };
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -72,7 +74,10 @@ var work = {
             Keeps a clean and safe work area along with routine equipment maintinence\n\
             and quality checks. Works closely with Quality Control to meet Zero-Loss\n\
             Certified Material requirements.",
-            "duties": []
+            "duties": ["Studies Blueprints", "Verifies Program Through Measurements\n\
+            and Feedback From Quality Control", "Maintains Production Consistency Through\n\
+            Attention to Part Details", "Maintains a Safe Work Enviroment", "Maintians Quality \n\
+            and Production Logs", "Explores Oppurtunities to Add Value to Jobs"]
         },
         {
             "employer": "M.T.J. Manufacturing",
@@ -100,25 +105,28 @@ var work = {
         },
         {
             "employer": "Naiad Dynamics US, INC.",
-            "title": "CNC Machinist, Service Technitian",
+            "title": "CNC Machinist, Service Technician",
             "dates": "2005 - 2011",
             "location": "Shelton, CT",
             "description": 'Originally started employment as a second shift CNC machinist\n\
             my employment was expanded to aid in facility and equiment maintinece. \n\
-            During my first 2 years i grew to be an integral part of second shift, advancing\n\
+            During my first 2 years I grew to be an integral part of second shift, advancing\n\
             production to meet constantly changing needs while working closely with the\n\
             facility and production management to maintain and improve organization, equipment\n\
             maintinence in a prioritized manner, and assist in expiditing and delivering\n\
             new products to the marine industry. Going into the latter years of employment\n\
             I was asked to join the service and installation portion of Naiad, due to my versatility\n\
             and skill. During that time I worked independantly, was responsible for keeping\n\
-            descript service records, maintaing "spares" stock in my company srvice van, and\n\
+            descript service records, maintaing "spares" stock in my company srvice vehicle, and\n\
             maintaining an extemely high customer satisfaction level. Service and New installations\n\
-            required constant travel to the surrounding Tri State area, as wel as the Pacific Northwest\n\
-            , North Mid and Southern Atlantic regions, and also Gran Canaria.',
-            "duties" : ["Programming, Setup, and Operation of CNC Equipment", "Close Monitoring\n\
-            of Job Accuracy", "Tool and Fixture Production", "Accurate Record Keeping",
-            "Strived To Increase Production"]
+            required constant travel to the surrounding Tri State area, as well as the Pacific Northwest\n\
+            , North Mid and Southern Atlantic regions, The Netherlands Antilles and the Canary Islands.',
+            "duties" : ["Planned, Programmed, Setup, Operated, and Verified CNC Production Operations",
+            "Maintained a Safe Work Enviroment", "Performed Req'd PM on CNC Equipment", 
+            "Documented Communications, Irregularities and Needs to maintain Continuity",
+            "Maintined Workflow With Schedule", "Diagnosed Technical Issues and Provided Solutions",
+            "Produced Detailed Service Reports", "Followed Strict Service Protocols", "Collaborated Latterally\n\
+            Within Naiad to Reach Realistic Solutions to Unique Product Issues"]
         }
     ]
 };
@@ -143,7 +151,7 @@ function displayWork(){
             $(".work-entry:last").append(HTMLworkdutiesStart);
             for(duty in work.jobs[job].duties){
             var formattedDuties = HTMLworkDuties.replace("%data%", work.jobs[job].duties[duty]);
-            $("#dutiesItem").append(formattedDuties);
+            $(".work-entry:last").append(formattedDuties);
             }
         };
 

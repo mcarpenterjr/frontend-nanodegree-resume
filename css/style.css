@@ -53,37 +53,59 @@ ul {
 }
 
 #skills {
-    color: #F5AE23;
-    font-family: Oswald, sans-serif;
+    color: #73AFB6;
+    font-family: Overlock, sans-serif;
     letter-spacing: 1.5px;
     text-shadow: 1px 4px 6px #000000;
     font-size: 22px;
     font-weight: 400;
     list-style-type: none;
+    padding-bottom: 0px;
+    margin-top: 15px;
 }
 
 #workExperience{
     clear: both;
     padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#workExperience h2{
+    width: 100%;
 }
 
 #duties{
     font-family: Oswald, sans-serif;
     color: #5F9DA1;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 10px;
     margin-bottom: 5px;
     padding-bottom: 0;
 }
 
-#dutiesItem{ 
+#dutiesItems{ 
     margin-top: 0;
     padding-top: 0;   /* Makes the list snuggle with its heading */
+    
+}
+
+#dutiesItems .flex-item{
+    margin-bottom: 10px
+}
+
+#projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#projects h2{
+    width: 100%;
 }
 
 #projects img{
-    display: inline-block;
     width: 100%;
     max-width: 375px;
     margin-left: auto;
@@ -101,8 +123,15 @@ ul {
     /* END CLASS BY ID */
 
 .education-entry, .work-entry, .project-entry {
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 5%;
     padding-right: 5%;
+    width: 100%;
+    //max-width: 450px;
+    flex-grow: 1;
+    flex-basis: 400px;
+    align-self: stretch;
     font-family: Roboto, sans-serif;
 }
 
@@ -158,6 +187,17 @@ h2, h3, h4, h5 {
     float: right;
 }
 
+.bullet-text{
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: #E2D893;
+    
+}
+
+.flex-item .bullet-text{
+    margin-bottom: 10px;
+}
+
 p {
     color: #ababab;
     font-size: 14px;
@@ -172,16 +212,19 @@ a {
 }
 
 .welcome-message {
-    color: #ffffff;
+    color: #E2D893;
     font-family: Overlock, sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 22px;
     line-height: 28px;
+    text-shadow: 1px 4px 4px #000000, 0 0 0 #000, 1px 4px 3px #73AFB6;
 }
 
 .flex-item{
-    
+    text-align: center;
+    align-self: stretch;
+    flex-grow: 1;
 }
 
 /* Original project Class now used for testing
@@ -190,12 +233,12 @@ a {
     }
 */
 
-.orange-text {
-    font-size: 24px;
-    font-family: Bangers, sans-serif;
-    letter-spacing: 1.5px;
-    text-shadow: 1px 4px 6px #000000, 0 0 0 #000, 1px 4px 6px #000000;
-    color: #F5AE23;
+.blue-text {
+    font-size: 22px;
+    font-family: Overlock, sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 1px 4px 4px #000000, 0 0 0 #000, 1px 4px 3px #73AFB6;
+    color: #5F9DA1;
 }
 
 .heading-text {
@@ -208,9 +251,10 @@ a {
 
 .white-text {
     color: #ffffff;
+    font-size: 20px;
     font-family: Overlock, sans-serif;
     font-weight: 400;
-    text-shadow: 1px 4px 6px #634271;
+    text-shadow: 1px 4px 3px #73AFB6;
 }
 
 

@@ -15,25 +15,25 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="white-text">%data%</span><hr/>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span>\n\
+var HTMLcontactGeneric = '<li class="flex-item"><span class="blue-text">%contact%</span>\n\
     <span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><a class="contact-ttp orange-text" href="callto://%data%">\n\
+var HTMLmobile = '<li class="flex-item"><a class="contact-ttp blue-text" href="callto://%data%">\n\
     Mobile<span class="white-text">%data%</span></a></li>';
-var HTMLemail = '<li class="flex-item"><a class="contact-ttp orange-text" href="mailto:%data%">\n\
+var HTMLemail = '<li class="flex-item"><a class="contact-ttp blue-text" href="mailto:%data%">\n\
     Email<span class="white-text">%data%</span></a></li>';
-var HTMLtwitter = '<li class="flex-item"><a class="contact-ttp orange-text" target="_blank" \n\
+var HTMLtwitter = '<li class="flex-item"><a class="contact-ttp blue-text" target="_blank" \n\
     href="https://twitter.com/%data%">Twitter<span class="white-text">@%data%</span></a></li>';
-var HTMLgithub = '<li class="flex-item"><a class="contact-ttp orange-text" target="_blank" \n\
+var HTMLgithub = '<li class="flex-item"><a class="contact-ttp blue-text" target="_blank" \n\
     href="https://github.com/%data%">Github<span class="white-text">%data%</span></a></li>';
-var HTMLlinkedin = '<li class="flex-item"><a class="contact-ttp orange-text" target="_blank" \n\
-    href="https://www.linkedin.com/pub/mark-carpenter-jr/37/12b/b45">Linkedin<span class="white-text">%data%</span></a></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">Location</span><span class="white-text">%data%</span></li>';
+var HTMLlinkedin = '<li class="flex-item"><a class="contact-ttp blue-text" target="_blank" \n\
+    href="https://www.linkedin.com/mcarpenterjr">Linkedin<span class="white-text">%data%</span></a></li>';
+var HTMLblog = '<li class="flex-item"><span class="blue-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="blue-text">Location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skills">Skills at a Glance:</h3><ul id="skillsItem" class="flex-box"></ul>';
+var HTMLskillsStart = '<h3 id="skills">Skills Snapshot:</h3><ul id="skillsItem" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
@@ -42,8 +42,8 @@ var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
-var HTMLworkdutiesStart = '<h3 id="duties">Responsibilities -</h3><ul id="dutiesItem" class="flex-box"></ul>';
-var HTMLworkDuties = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLworkdutiesStart = '<h3 id="duties">Responsibilities -</h3><ul id="dutiesItems" class="flex-box"></ul>';
+var HTMLworkDuties = '<li class="flex-item"><span class="bullet-text">%data%</span></li>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
