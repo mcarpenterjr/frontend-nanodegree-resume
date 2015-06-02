@@ -412,6 +412,17 @@ a:hover.contact-ttp span {
     .biopic {
         display: block;
     }
+        #map {
+        display: block;
+        height: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+        #mapDiv {
+        height: 400px;
+        width: 100%;
+        padding-bottom: 5%;
+    }
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
