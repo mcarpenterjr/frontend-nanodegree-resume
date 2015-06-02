@@ -17,7 +17,7 @@ var HTMLheaderRole = '<span class="white-text">%data%</span><hr/>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="blue-text">%contact%</span>\n\
     <span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><a class="contact-ttp blue-text" href="callto://%data%">\n\
+var HTMLmobile = '<li class="flex-item"><a class="contact-ttp blue-text" href="tel://%data%">\n\
     Mobile<span class="white-text">%data%</span></a></li>';
 var HTMLemail = '<li class="flex-item"><a class="contact-ttp blue-text" href="mailto:%data%">\n\
     Email<span class="white-text">%data%</span></a></li>';
@@ -46,21 +46,21 @@ var HTMLworkdutiesStart = '<h3 id="duties">Responsibilities -</h3><ul id="duties
 var HTMLworkDuties = '<li class="flex-item"><span class="bullet-text">%data%</span></li>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectTitle = '<a href="#" target="_blank">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
-var HTMLprojectUrl = '<a href="%data%" target="_blank">See The Project Here</a>';
+var HTMLprojectUrl = '<a href="#" target="_blank">%data%</a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
+var HTMLschoolName = '<a href="#" target="_blank">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineClasses = '<h3 id="onlineClasses">Online Classes</h3>';
+var HTMLonlineTitle = '<a href="#" target="_blank">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';

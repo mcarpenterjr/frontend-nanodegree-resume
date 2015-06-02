@@ -6,11 +6,13 @@ var bio = {
         "email": "marksthings24@gmail.com",
         "github": "xXSirenSxOpusXx",
         "linkedin": "Mark N Carpenter Jr",
-        "twitter": "xXSirenSxOpusXx", //*Drop the @ to build the link Automagically adds on display
+        "twitter": "xXSirenSxOpusXx", 
         "location": "Newtown, CT"
     },  
     "bioPic" : "images/mncheadshot.jpg",
-    "welcomeMessage" : "What I lack in Formal Education I make up for with Experience.",
+    "welcomeMessage" : "With strong problem solving skills, the ability to adapt,\n\
+    and capability to quickly learn new tasks, I know I will become a vital asset to\n\
+    almost any team. ",
     "skills" : ["HTML", "CSS", "JavaScript", "Jquery", "Bootstrap", "CMS", "Netbeans",
         "Git", "GitHub", "MySql", "iOS", "Windows", "CLI", "PhotoShop", "Fireworks",
         "Premier Pro", "Illistrator", "DreamWeaver", "Joomla", "WordPress", "MVC",
@@ -59,6 +61,7 @@ $("#footerContacts").append(formattedTwitter);
 $("#footerContacts").append(formattedGithub);
 $("#footerContacts").append(formattedLinkedin);
 $("#footerContacts li a").removeClass("contact-ttp");
+
 //*<-- Work Information Start -->*//
 
 var work = {
@@ -84,8 +87,13 @@ var work = {
             "title": "Manager",
             "dates": "2002 - 2014",
             "location": "Bridgeport, CT",
-            "description": 'AHHHHH WHAT DO I WRITE!!!',
-            "duties": []
+            "description": "My employment at M.T.J. covered a very large scope of \n\
+            business operations, that scope encompassed labor on the shop floor,\n\
+            to customer invoicing and sales. To be upfront and honest M.T.J. is owned\n\
+            and operated by my father, the 'M' is the first initial of my name, regaurdless\n\
+            my experience and knowledge gained during my time here have proved invaluable\n\
+            to my success on my career path. (I'll finish this later)",
+            "duties": ["Cool Thing 1", "Cool Thing 2", "Cool Thing 3"]
         },
         {
             "employer": "Mount Snow",
@@ -101,7 +109,8 @@ var work = {
             tasks. Things I most enjoyed were, working with a diverse group, and being\n\
             an integral part of an etremely large team of talent that kept things running\n\
             at a major winter destination for Southern New Englanders and the Tri-State area.',
-            "duties": []
+            "duties": ["Meet and Greet Customers", "Assist With Major Events", "Help With\n\
+            Day to Day Operations", "Educate Proper Skiing and Rdiding Edicate"]
         },
         {
             "employer": "Naiad Dynamics US, INC.",
@@ -184,46 +193,85 @@ var education = {
     }],
     "onlineCourses" : [
         {
-            "title" : "JavaScript Syntax",
+            "title" : "Intro to HTML and CSS",
             "school" : "Udacity",
             "dates" : "2015",
-            "url" : "http://www.udacity.com/course/ud804"
+            "url" : "https://www.udacity.com/course/intro-to-html-and-css--ud304-nd"
+        },
+        {
+            "title" : "Responsive Web Design Fundementals",
+            "school" : "Udacity",
+            "dates" : "2015",
+            "url" : "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893-nd"
+        },
+        {
+            "title" : "Responsive Images",
+            "school" : "Udacity",
+            "dates" : "2015",
+            "url" : "https://www.udacity.com/course/responsive-images--ud882-nd"
+        },
+        {
+            "title" : "Intro To jQuery",
+            "school" : "Udacity",
+            "dates" : "2015",
+            "url" : "https://www.udacity.com/course/intro-to-jquery--ud245-nd"
         },
         {
             "title" : "JavaScript Syntax",
             "school" : "Udacity",
             "dates" : "2015",
-            "url" : "http://www.udacity.com/course/ud804"
+            "url" : "https://www.udacity.com/course/javascript-basics--ud804-nd"
         },
         {
             "title" : "Front-End Web Developer Nanodegree",
             "school" : "Udacity",
-            "dates" : "2015",
+            "dates" : "2015-Current",
             "url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
         }
     ]
 };
 function displayEducation(){
-for (school in education.schools) {
-    $("#education").append(HTMLschoolStart);
-    
-    var formattedSchool = HTMLschoolName.replace
-    ("%data%", education.schools[school].name);
-    
-    var formattedDegree = HTMLschoolDegree.replace
-    ("%data%", education.schools[school].degree);
-    
-    var formattedSchoolDegree = formattedSchool + formattedDegree;
-    
-    $(".education-entry:last").append(formattedSchoolDegree);
-    
-    var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-    $(".education-entry:last").append(formattedDates);
-    
-    var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-    $(".education-entry:last").append(formattedMajor);
-}
-}
+    for (school in education.schools) {
+        $("#education").append(HTMLschoolStart);
+
+        var formattedSchool = HTMLschoolName.replace
+        ("%data%", education.schools[school].name);
+        var formattedSchool = formattedSchool.replace
+        ("#", education.schools[school].url);
+
+
+        var formattedDegree = HTMLschoolDegree.replace
+        ("%data%", education.schools[school].degree);
+
+        var formattedSchoolDegree = formattedSchool + formattedDegree;
+        $(".education-entry:last").append(formattedSchoolDegree);
+        
+        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+        $(".education-entry:last").append(formattedDates);
+
+        var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+        $(".education-entry:last").append(formattedMajor);
+    };
+        $("#education").append(HTMLonlineClasses);
+    for (course in education.onlineCourses) {
+        $("#education").append(HTMLschoolStart);
+        
+        var formattedSchool = HTMLonlineSchool.replace
+        ("%data%", education.onlineCourses[course].school);
+
+        var formattedTitle = HTMLonlineTitle.replace
+        ("%data%", education.onlineCourses[course].title);
+        var formattedTitle = formattedTitle.replace
+        ("#", education.onlineCourses[course].url);
+
+        var formattedSchoolTitle = formattedTitle + formattedSchool;
+        $(".education-entry:last").append(formattedSchoolTitle);
+
+        var formattedDates = HTMLonlineDates.replace
+        ("%data%", education.onlineCourses[course].dates);
+        $(".education-entry:last").append(formattedDates);
+    }
+};
 
 displayEducation();
 
@@ -269,7 +317,7 @@ var projects = {
             "dates" : "2010",
             "description" : "While Employed at Naiad Dynamics, Inc. Naiad was\n\
         contracted to install over two and a half miles of stainless tubing for \n\
-        onboard hydraulic equipment onto the Yacht CakeWalk. I was responsible\n\
+        onboard hydraulic equipment, into the Yacht CakeWalk. I was responsible\n\
         to the lead project manager, Head Ship's Engineer and various system designers.\n\
         While over seeing the work of one to two other emplyees over the 8 month\n\
         install period. CakeWalk at the time was the largest private ship in the previous\n\
@@ -287,6 +335,8 @@ function displayProjects() {
         
         var formattedTitle = HTMLprojectTitle.replace
         ("%data%", projects.projects[project].title);
+        var formattedTitle = formattedTitle.replace
+        ("#", projects.projects[project].url);
         $(".project-entry:last").append(formattedTitle);
         
         var formattedDates = HTMLprojectDates.replace
@@ -304,12 +354,9 @@ function displayProjects() {
                 $(".project-entry:last").append(formattedImage);
             }
         }
-        var formattedUrl = HTMLprojectUrl.replace
-        ("%data%", projects.projects[project].url);
-        $(".project-entry:last").append(formattedUrl);
     }
 }
 displayProjects();
 
-//* <-- Loads Google Map Plots My Locations --> *//
+/* <-- Loads Google Map Plots My Locations --> */
 $("#mapDiv").append(googleMap);

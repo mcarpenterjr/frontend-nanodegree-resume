@@ -7,6 +7,7 @@
 body {
     background-color: #2B2301;
     background-attachment: fixed;
+    
 }
 
 .clearfix {
@@ -29,13 +30,9 @@ body {
     padding-bottom: 2.5%
 }
 
-ul {
-    list-style-type: none;
-}
+    /* Begin Styles by ID */
 
-    /* Begin class by ID */
-
-#main{
+#main {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
@@ -48,8 +45,7 @@ ul {
 #name {
     color: #73AFB6;
     font-family: Oswald, sans-serif;
-    font-weight: 400;
-    font-size: 52px;  
+    font-weight: 400; 
 }
 
 #skills {
@@ -64,7 +60,11 @@ ul {
     margin-top: 15px;
 }
 
-#workExperience{
+#skillItem {
+    
+}
+
+#workExperience {
     clear: both;
     padding-bottom: 10px;
     display: flex;
@@ -72,63 +72,72 @@ ul {
     justify-content: space-around;
 }
 
-#workExperience h2{
-    width: 100%;
-}
-
-#duties{
+#duties {
     font-family: Oswald, sans-serif;
     color: #5F9DA1;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 10px;
     margin-bottom: 5px;
     padding-bottom: 0;
 }
 
-#dutiesItems{ 
+#dutiesItems {  
     margin-top: 0;
-    padding-top: 0;   /* Makes the list snuggle with its heading */
-    
+    padding: 0;   /* Makes the list snuggle with its heading */
+    list-style: none;
 }
 
-#dutiesItems .flex-item{
-    margin-bottom: 10px
+#dutiesItems ~ .flex-item {
+    margin-bottom: 10px;
+    list-style: none;
 }
 
-#projects{
+#projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-#projects h2{
-    width: 100%;
-}
 
-#projects img{
+#projects img {
     width: 100%;
     max-width: 375px;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 10px;
     overflow: hidden;
 }
 
+#education {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#education em {
+    font-size: 16px;
+    color: #E2D893;
+    font-weight: 400;
+}
+
 #letsConnect {
-    text-align: right;
+    width: 100%;
     font-family: Overlock, sans-serif;
     font-size: 18px;
 }
 
-    /* END CLASS BY ID */
+    /* END STYLES BY ID */
 
 .education-entry, .work-entry, .project-entry {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
     width: 100%;
-    //max-width: 450px;
+    max-width: 450px;
     flex-grow: 1;
     flex-basis: 400px;
     align-self: stretch;
@@ -148,14 +157,18 @@ h2 {
     font-size: 24px;
     color: #73AFB6;
     line-height: 29px;
-    padding: 10px;
+    padding: 5px;
+    width: 55%;
+    margin-right: auto;
 }
 
 h3 {
-    font-style: italic;
-    font-size: 20px;
-    color: #000000;
+    font-style: normal;
+    font-size: 18px;
+    color: #73AFB6;
     line-height: 22px;
+    width: 55%;
+    margin-right: auto;
 }
 
 h4 {
@@ -173,15 +186,15 @@ h2, h3, h4, h5 {
 
 .date-text {
     font-style: italic;
-    font-size: 14px;
-    color: #999999;
+    font-size: 16px;
+    color: #ffffff;
     line-height: 16px;
     float: left;
 }
 
 .location-text {
     font-style: italic;
-    font-size: 14px;
+    font-size: 16px;
     color: #999999;
     line-height: 16px;
     float: right;
@@ -189,9 +202,8 @@ h2, h3, h4, h5 {
 
 .bullet-text{
     font-family: Roboto, sans-serif;
-    font-size: 14px;
-    color: #E2D893;
-    
+    font-size: 16px;
+    color: #73AFB6;  
 }
 
 .flex-item .bullet-text{
@@ -199,7 +211,7 @@ h2, h3, h4, h5 {
 }
 
 p {
-    color: #ababab;
+    color: #E2D893;
     font-size: 14px;
     line-height: 21px;
 }
@@ -287,6 +299,16 @@ span {
     padding: 5px;
 }
 
+ul {
+    list-style-type: none;
+    -webkit-margin-after: 0px;
+    -webkit-margin-before: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-padding-start: 0px;
+}
+
+
     /*  Start Custom ToolTip
     *
     *    Uses CSS to build tool tips for contact information
@@ -352,45 +374,116 @@ a:hover.contact-ttp span {
 
 
 @media only screen and (max-width: 1024px) {
-  #letsConnect {
-    margin-top: 5%;
-  }
+    #letsConnect {
+        margin-top: 5%;
+    }
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+    .biopic {
+        width: 175px;
+    }
 }
 
 @media only screen and (max-width: 750px) {
-  #letsConnect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+    #letsConnect {
+        margin-top: 10%;
+    }
+    .biopic {
+        width: 150px;
+    }
+    .welcome-message {
+        display: none;
+    }
+    #map {
+        display: block;
+        height: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #mapDiv {
+        height: 400px;
+        width: 100%;
+        padding-bottom: 5%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #skills,
+    .biopic {
+        display: block;
+    }
 }
 
-#map {
-  display: block;
-  height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    p {
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    .blue-text {
+        font-size: 18px;
+    }
+    #letsConnect {
+        margin-top: 2%;
+    }
+    #letsConnect  h2 {
+        padding-bottom: 0px;
+    }
+    #footerContacts {
+        padding-top: 2px;
+    }
+    .education-entry, .work-entry, .project-entry {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        max-width: 275px;
+    }
+    a {
+        margin-top: 0px;
+    }
+    
+    
 }
 
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
-@media only screen and (min-width: 750px) {
-  #skills,
-  .biopic {
-    display: block;
-  }
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    p {
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    .blue-text {
+        font-size: 14px;
+    }
+    a {
+        margin-top: 0px;
+    }
+    #letsConnect {
+        margin-top: 10%;
+    }
+    #letsConnect  h2 {
+        padding-bottom: 0px;
+    }
+    #footerContacts {
+        padding-top: 2px;
+    }
+    a {
+        margin-top: 0px;
+    }
 }
