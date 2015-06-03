@@ -26,7 +26,7 @@ var HTMLtwitter = '<li class="flex-item"><a class="contact-ttp blue-text" target
 var HTMLgithub = '<li class="flex-item"><a class="contact-ttp blue-text" target="_blank" \n\
     href="https://github.com/%data%">Github<span class="white-text">%data%</span></a></li>';
 var HTMLlinkedin = '<li class="flex-item"><a class="contact-ttp blue-text" target="_blank" \n\
-    href="https://www.linkedin.com/mcarpenterjr">Linkedin<span class="white-text">%data%</span></a></li>';
+    href="https://www.linkedin.com/in/mcarpenterjr">Linkedin<span class="white-text">%data%</span></a></li>';
 var HTMLblog = '<li class="flex-item"><span class="blue-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="blue-text">Location</span><span class="white-text">%data%</span></li>';
 
