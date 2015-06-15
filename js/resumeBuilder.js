@@ -76,9 +76,8 @@ var work = {
             "to customer invoicing and sales. To be upfront and honest M.T.J. is "+
             "owned and operated by my father, the 'M' is the first initial of my "+
             "name, regaurdless my experience and knowledge gained during my time "+
-            "here have proved invaluable to my success on my career path. "+
-            "(I'll finish this later)",
-            'duties': ['Cool Thing 1', 'Cool Thing 2', 'Cool Thing 3']
+            "here have proved invaluable to my success on my career path.",
+            'duties': []
         },
         {
             'employer': 'Mount Snow',
